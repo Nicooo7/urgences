@@ -1,0 +1,48 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Titre</title>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="static/materialize/css/materialize.css"/>
+
+    	<script src="static/jquery-3.2.1.js"> </script>
+    	<script type="text/javascript" src="static/materialize/js/materialize.min.js"></script>
+    </head>
+
+    <body>
+    	
+
+    	<div class="titre"> <h3>LISTE DES PATIENTS</h3> </div>
+
+
+				<div class="input-field col s12">
+					<div id="ligne"></div>
+				</div>
+			
+
+    	<script>
+
+		var donnee = {{donnee}}			    						    	
+		entree = JSON.parse(donnee)					
+ 
+        jQuery('#ligne').html('<div class="collection"><a href="#!" class="collection-item"><span class="badge">1</span>' + entree.nom + '</a><a href="#!" class="collection-item"><span class="new badge">4</span>' + entree.prenom + '</a><a href="#!" class="collection-item">' + entree.ipp + '</a><a href="#!" class="collection-item"><span class="badge">14</span>'+ entree.urgence + '</a></div>');
+                    		
+                          		});            		
+
+
+    	
+    	
+    	
+
+    	</script>
+
+    
+
+    </body>
+</html>
+
+
